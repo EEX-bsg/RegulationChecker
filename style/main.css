@@ -1,0 +1,24 @@
+.OK{
+    background-color: greenyellow;
+}
+.notOK{
+    background-color: palevioletred;
+}
+table{
+    border: 1px solid;
+    white-space: nowrap;
+}
+th{
+    border-bottom: 1px solid;
+}
+td{
+    border: 1px solid;
+    font-weight: bold;
+}
+th{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color:white;
+}

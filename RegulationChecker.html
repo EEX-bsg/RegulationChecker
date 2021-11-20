@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RegulationChecker</title>
-    <script type="text/javascript" src="main"></script>
+    <script type="text/javascript" src="setting.js"></script>
+    <script type="text/javascript" src="src/blocksData.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
+    <link type="text/css" rel="stylesheet" href="style/main.css"
 </head>
-<body>
-    
+<body onload="init()">
+    <h1>レギュレーションチェッカーforP1GP5th</h1>
+    <p>
+        大量の機体データをBesiegeを起動せずにレギュレーションチェックすることが可能です<br>
+        総ブロック数、使用禁止ブロック、ブロック個数制限(上限、下限)、コピペ・限凸の判定・スキン使用個数を読み込めます<br>
+        バウンディングボックスに収まっているか、プロペラのピッチ変更は測定不能です<br>
+        初期設定では第５回P1GPレギュレーションに合わせてあります<br>
+        詳しい内容はreadme.txtを確認して下さい。
+    </p>
+    <h4>以下の「ファイルを選択」から、読み取りたいマシンデータのあるフォルダを選択して下さい</h4>
+    <p>
+        フォルダー内にあるマシンデータをすべて読み込みます<br>
+        ファイルをアップロードするかと警告がでますが、webサーバー等には一切接続されておらず、流出する危険性は一切無いので安心してください。
+    </p>
+    <input id="select-directory" type="file" name="upfile[]" webkitdirectory />
+    <p>問題が無い項目は○マーク</p>
+    <table>
+        <thead>
+            <tr>
+                <th>○</th>
+                <th>ファイル名</th>
+                <th>機体名</th>
+                <th>総ブロック数</th>
+                <th>使用禁止ブロック</th>
+                <th>ブロック個数制限</th>
+                <th>コピペ・限凸禁止</th>
+                <th>スケーリング禁止</th>
+                <th>スキン使用数</th>
+                <th>備考</th>
+            </tr>
+        </thead>
+        <tbody id="result">
+
+        </tbody>
+    </table>
+    <p style="font-size:10px">
+        Copyright (c) 2021 EEX-bsg<br>
+        Released under the MIT license<br>
+        https://opensource.org/licenses/mit-license.php
+    </p>
 </body>
 </html>
