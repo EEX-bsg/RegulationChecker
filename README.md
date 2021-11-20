@@ -30,6 +30,7 @@ style
   |_main.css           :CSS  
 
 ## ◇ インストール ◇
+githubのCodeをクリックして、Download ZIP
 zipファイルを解凍
 
 ## ◇ アンインストール ◇
