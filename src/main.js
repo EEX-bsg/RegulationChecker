@@ -33,6 +33,7 @@ const checkMachine = function(dom){
     let totalblocks = 0;
     let isTotalBlocksOverLimit = false;
     let skins = new Set();
+    let skinNamelist = new Set();
     let isUsingBanBlock = false;
     let usingBanBlockList = new Set();
     let isUsingOverLimitBlock = false;
@@ -62,7 +63,9 @@ const checkMachine = function(dom){
             let skin;
             if((skin = block.getElementsByTagName("Skin")[0]) != null){
                 const skinId = skin.getAttribute("id");
+                const skinName = skin.getAttribute("name");
                 skins.add(skinId);
+                skinNamelist.add(skinName);
             }
         }
         {
@@ -125,7 +128,8 @@ const checkMachine = function(dom){
         isUsingScaling,
         [...listOfBlocksScaling],
         skinCount,
-        isOverSkins
+        isOverSkins,
+        [...skinNamelist]
     ];
 }
 
@@ -194,6 +198,13 @@ const displayResult = function(fileName, machineName, result) {
         let text ="スケーリングの使用:";
         result[10].forEach((id)=>{
             text += `${blocksData[id].name}, `
+        })
+        bikouElem.textContent += text + "　　";
+    }
+    if(result[12]){
+        let text = "スキン使用数上限の超過: ";
+        result[13].forEach((skinname)=>{
+            text += `${skinname}, `
         })
         bikouElem.textContent += text + "　　";
     }
