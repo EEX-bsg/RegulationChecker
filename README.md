@@ -1,11 +1,11 @@
-# レギュレーションチェッカー  ver.1.0
+# レギュレーションチェッカー  ver.1.1
 
 【 ソフト名 】レギュレーションチェッカー  
 【 製 作 者 】EEX-bsg  
 【  種  別  】webアプリケーション   
 【 開発環境 】chrome96  
 【 動作環境 】chrome, firefox, MicrosoftEdge, Opera  
-【バージョン】1.0  
+【バージョン】1.1  
 【最終更新日】2021.11.21  
 【  Dicord  】EEX#6681  
 【 E - mail 】exendra314@gmail.com  
